@@ -5,7 +5,7 @@ import './App.css';
 const App : React.FC =() =>{
   return(
     <div className='BookMaker'>
-      <span className='modelName'>BookMaker</span>
+      <h1>BookMaker</h1>
       <UserLogin />
     </div>
   )
