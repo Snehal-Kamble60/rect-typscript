@@ -2,8 +2,10 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form'; 
 import "../../src/components/style.css"
-import { MdPassword, MdLogin} from "react-icons/md";
-import { ImUser } from "react-icons/im";
+// import { MdPassword, MdLogin} from "react-icons/md";
+// import { ImUser } from "react-icons/im";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser,faRightToBracket, faLock} from '@fortawesome/free-solid-svg-icons'
 
 const UserLogin = () => {
   return (
@@ -11,9 +13,9 @@ const UserLogin = () => {
     <Form className="Auth-form">
       <div className="Auth-form-content">
         
-        <h3 className="Auth-form-title"><MdLogin /> Sign In</h3>
+        <h3 className="Auth-form-title"><FontAwesomeIcon icon={faRightToBracket} /> Sign In</h3>
         <div className="form-group mt-3">
-          <Form.Label><ImUser/> User Name</Form.Label>
+          <Form.Label><FontAwesomeIcon icon={faUser} /> User Name</Form.Label>
           <Form.Control
             type="text"
             className="form-control mt-1"
@@ -21,7 +23,7 @@ const UserLogin = () => {
           />
         </div>
         <div className="form-group mt-3">
-          <Form.Label><MdPassword /> Password</Form.Label>
+          <Form.Label><FontAwesomeIcon icon={faLock} /> Password</Form.Label>
           <Form.Control
             type="password"
             className="form-control mt-1"
