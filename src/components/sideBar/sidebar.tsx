@@ -4,23 +4,26 @@ import styled from 'styled-components'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faBars,faXmark} from '@fortawesome/free-solid-svg-icons'
 import {SidebarData} from "../sideBar/sidebarData"
+import "../sideBar/sidebar.css"
+
 
 // const Navbar = styled.div`
 //     display: flex;
 //     justify-content: start;
 //     align-items: center;
 //     height: 3.5rem;
-//     background-color: #c1c1cb;
+//     background-color: #f7f6f2;
 // `
 
 const SidebarMenu = styled.div`
-    width: 250px;
+    width: 233px;
     height: 100vh;
-    background-color: #c1c1cb;
+    background-color: #f7f6f2;
     position: fixed;
     top: 0;
     left:'-100%';
     transition: .6s;
+    border-width: thick;
 `
 
 const MenuItems = styled.li`
@@ -39,16 +42,16 @@ const MenuItemLinks = styled(Link)`
     padding: 0 2rem;
     font-size: 20px;
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
 
     &:hover {
-        background-color: #ffffff;
+        background-color: #42d415;
         color: #000080;
         width: 100%;
         height: 45px;
-        text-align: center;
+        text-align: star;
         border-radius: 5px;
-        margin: 0 2rem;
+        margin: 0 1rem;
     }
     `
 
@@ -56,16 +59,11 @@ const MenuItemLinks = styled(Link)`
    
 
     const Sidebar: React.FunctionComponent = () => {
-        // const [close, setClose] = useState(false)
-        // const showSidebar = () => setClose(!close)
         return (
-            <>
-                <nav>
-                    {/* <MenuIconOpen to="#" onClick={showSidebar}>
-                    <FontAwesomeIcon icon={faBars} />
-                    </MenuIconOpen> */}
+            <div className="NavBar" >
                     <SidebarMenu>
-                        <h3>Company Admin</h3>
+                    <h3> Company Admin</h3>
+                    <span className='text-secondary ms-4'>OVERVIEW</span>
                     {SidebarData.map((item, index) => {
                         return (
                             <MenuItems key={index}>
@@ -77,11 +75,9 @@ const MenuItemLinks = styled(Link)`
                         )
                     })}
                     </SidebarMenu>
-                    
-                </nav>
-    
-                
-            </>
+
+            </div>  
+
         )
     }
     

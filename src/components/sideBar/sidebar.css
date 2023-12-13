@@ -1,6 +1,11 @@
 
 
- nav{
+h3{
+    margin-top: 5%;
+    margin-left: 15%;
+    color:#42d415
+}
+ .NavBar{
     display: flex;
     justify-content: start;
     align-items: center;
